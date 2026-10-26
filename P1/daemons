@@ -1,0 +1,10 @@
+zebra=yes
+bgpd=yes
+ospfd=yes
+ospf6d=no
+ripd=no
+ripngd=no
+isisd=yes
+staticd=yes
+
+zebra_options="--ecmp 8"
