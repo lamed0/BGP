@@ -1,0 +1,8 @@
+FROM host-mlamrani:latest
+
+RUN apk add --no-cache iproute2 iputils
+
+COPY host-setup.sh /usr/local/bin/host-setup.sh
+RUN chmod +x /usr/local/bin/host-setup.sh
+
+CMD ["/bin/sh", "-c", "/usr/local/bin/host-setup.sh && exec sleep infinity"]

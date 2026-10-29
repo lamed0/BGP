@@ -1,0 +1,7 @@
+FROM router-mlamrani:latest
+
+COPY router-setup.sh /usr/local/bin/router-setup.sh
+
+RUN chmod +x /usr/local/bin/router-setup.sh
+
+CMD ["/bin/sh", "-c", "/usr/local/bin/router-setup.sh && /usr/lib/frr/frrinit.sh start && exec /bin/bash"]
